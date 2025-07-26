@@ -3,6 +3,8 @@
 # throughout this file
 import pygame
 from constants import *
+from circleshape import *
+from player import *
 
 def main():
     print("Starting Asteroids!")
@@ -22,9 +24,12 @@ def main():
 
         screen.fill((0,0,0))
 
+        player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+
+        player.draw(screen)
+
         pygame.display.flip()
         dt = clock.tick(60) /1000
-        print(f"delta is {dt}")
 
 
 
